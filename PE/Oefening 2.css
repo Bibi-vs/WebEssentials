@@ -1,0 +1,86 @@
+/* (4) Voorzie een dikke zwarte kader rond elke td en th. */
+th,
+td {
+    border: 2px solid black;
+}
+
+/* Domino doorlopend: ???ook de twee lege cellen eronder??? */
+thead th:nth-child(1) {
+    background-color: rgb(100,100,100);
+    background-image: url("domino-oef2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* (2) Er wordt overal een serif lettertype gebruikt. Behalve bij de teksten ‘win’, ‘loose’
+en ‘draw’. Hier wordt een monospace lettertype gebtruikt. Stel een font-grootte in
+zodat de tekst overal goed leesbaar is. */
+body {
+    font-family: serif;
+}
+
+tbody tr:nth-child(3) td:nth-child(3),
+tbody tr:nth-child(3) td:nth-child(4) {
+    font-family: monospace;
+}
+
+tbody tr:nth-child(4) td:nth-child(2),
+tbody tr:nth-child(4) td:nth-child(4),
+tbody tr:nth-child(4) td:nth-child(6) {
+    font-family: monospace;
+}
+
+tbody tr:nth-child(5) td:nth-child(2),
+tbody tr:nth-child(5) td:nth-child(3) {
+    font-family: monospace;
+}
+
+tbody tr:nth-child(6) td:nth-child(3) {
+    font-family: monospace;
+}
+
+tbody tr:nth-child(7) td:nth-child(3) {
+    font-family: monospace;
+}
+
+/* (3) Je mag een zelf gekozen, vaste waarde voor de breedte van de tabel instellen. */
+table {
+    width: 500px;
+    table-layout: auto;
+}
+
+/* (5) Je maakt geen gebruik van class of id maar wel gebruik van de nth-child selector om
+de achtergrond- en schrijfkleuren in te stellen. De schrijfkleuren zijn wit of zwart. De
+grijze achtergrondkleuren stel je in via de functie rgb. Roep rgb aan met drie dezelfde
+getallen als argument om een grijs-tint te kiezen. */
+
+/* Domino en resultaten */
+thead tr:nth-child(1) {
+    background-color: rgb(100, 100, 100);
+    color: white;
+}
+
+/* 2025 */
+tbody tr:nth-child(2) td:nth-child(1) {
+    background-color: rgb(100, 100, 100);
+    color: white;
+}
+
+/* spelers */
+tbody tr:nth-child(1) td {
+    background-color: rgb(150,150,150);
+    color: black;
+    font-weight: bold;
+}
+
+tbody td:nth-child(1) {
+    background-color: rgb(150,150,150);
+    color: black;
+    font-weight: bold;
+}
+
+tbody td:empty {
+    background-color: rgb(230,230,230);
+}

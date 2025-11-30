@@ -1,0 +1,56 @@
+
+form div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+form label {
+    flex: 0 0 150px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea,
+form input[type="range"] {
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+
+input[type="range"] {
+    width: 300px;
+}
+
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+
+div input[type="radio"] {
+    margin-right: 5px;
+}
+
+div label input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+button {
+    padding: 5px 15px;
+    font-size: 1rem;
+}
+

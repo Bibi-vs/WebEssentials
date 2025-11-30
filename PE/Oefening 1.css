@@ -1,0 +1,225 @@
+/* (1) Header, nav en main worden gecentreerd en hebben breedte 1200px. */
+header,
+nav,
+main {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+/* (2) (Minder belangrijk) In de header en nav worden grijze horizontale lijnen getoond. Je
+maakt deze aan de hand van border-top en border-bottom. */
+header,
+nav {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    padding: 20px;
+}
+
+/* (3) De 2 figuren in de header worden links en rechts uitgelijnd. */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+
+/* groter lettertype meeples choice 2024 */
+header h1 {
+    font-size: 50px;
+}
+
+
+/* 4) Voorzie een grijze afgeronde kader rond img logo. Voorzie een zwarte afgeronde kader rond de <span>&#128269;</span> en een grijze achtergrond. */
+header img {
+    width: 100px;              /* gelijke breedte */
+    height: 100px;             /* gelijke hoogte */
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+header span {
+    width: 100px;              /* gelijke breedte */
+    height: 100px;             /* gelijke hoogte */
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* (5) De hyperlinks krijgen een grijze achtergrondkleur als je er met de muis over beweegt. */
+/* (7) (Minder belangrijk) Voorzie voldoende witruimte zodat de elementen niet tegen elkaar plakken. Hieronder wordt een foutieve weergave (zonder witruimte) getoond. */
+/* (13) De hyperlinks zijn alle 4 even breed. */
+nav a {
+    flex: 1;
+    text-decoration: none;
+    color: black;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: 2px solid #ccc;       /* grijze border zoals bij afbeeldingen */
+}
+
+nav a:hover {
+    background-color: #ccc;
+}
+
+/* (6) Plaats de hyperlinks naast elkaar. ==> staan al naast elkaar? */
+
+
+/* (8) Plaats de articles in de main naast elkaar */
+main .games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+main .games article {
+    width: 280px;
+    padding: 5px;
+}
+
+/* (9) De figuren hebben een afgeronde, grijze kader. */
+
+main .games article figure {
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+main .games article img {
+
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* (10) De sterren komen in de rechterbovenhoek te staan. */
+main .games article figure .stars {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+/* (11) De footer heeft grijze achtergrond en witte schrijfkleur. De footer blijft onderaan staan bij het scrollen. */
+footer {
+    background-color: #ccc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+
+    position: fixed;
+    bottom: 0;
+    /* ook in midden uitlijnen */
+    left: 25%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* (12) De hele pagina herschaalt met de breedte van het scherm. */
+header, nav, main, footer {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main .games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+main .games article {
+    flex: 1 1 280px;
+    box-sizing: border-box;
+}
+
+/* (14) De articles worden per 2 op een lijn getoond. ???*/
+
+
+/* (15) De header en footer verdwijnen.
+(16) De hperlinks in de nav staan onder elkaar.
+(17) De articles staan onder elkaar.
+(18) De figuren in de articles worden links uitgelijnd. De tekst wordt rond de figuur geplaatst. */
+@media (max-width: 900px) {
+
+    header,
+    footer {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        text-align: left;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: left;
+        flex: none;
+    }
+
+    main .games {
+        display: block;
+    }
+
+    main .games article {
+        width: 100%;
+        margin-bottom: 20px;
+        flex: none;
+    }
+
+    main .games article figure {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    main .games article img {
+        width: 150px;
+        height: auto;
+    }
+
+    main .games article figure .stars {
+        position: static;
+        display: inline-block;
+        margin-top: 5px;
+        background: none;
+        padding: 0;
+    }
+}

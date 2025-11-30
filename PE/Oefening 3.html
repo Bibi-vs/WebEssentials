@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Oef3</title>
+  <link href="Oefening 3.css" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+</head>
+
+<body>
+<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+<h1>Spel-sessie Wingspan</h1>
+<img src="oef3.jpeg" alt="Logo" width="300" height="200">
+</div>
+
+<form action="verwerk.html" method="GET">
+  <div>
+    <label for="datum">Datum:</label>
+    <input type="text" id="datum" name="datum" required>
+  </div>
+
+  <div>
+    <label for="start">Start:</label>
+    <input type="text" id="start" name="start" min="0" max="23" required>
+
+    <label for="tijdsduur">Tijdsduur:</label>
+    <input type="text" id="tijdsduur" name="tijdsduur" min="1" max="12" required>
+  </div>
+
+  <div>
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" name="email" required>
+  </div>
+
+  <div>
+    <label for="complexiteit">Complexiteit:</label>
+    <input type="range" id="complexiteit" name="complexiteit" min="1" max="10" step="1">
+  </div>
+
+  <div>
+    <label for="geluk">Geluk:</label>
+    <input type="range" id="geluk" name="geluk" min="1" max="10" step="1">
+  </div>
+
+  <div>
+    <label for="strategie">Strategie:</label>
+    <input type="range" id="strategie" name="strategie" min="1" max="10" step="1">
+  </div>
+
+  <div>
+    <label for="description">Beschrijving:</label>
+
+    <section>
+      <textarea id="description" name="beschrijving" placeholder="Vul een beschrijving in" maxlength="250" rows="5" cols="100"></textarea>
+    </section>
+  </div>
+
+  <div>
+      <label for="1ster">Aantal sterren:</label>
+      <input type="radio" id="1ster" name="sterren" value="sterren">
+      &star;
+
+      <label for="2sterren"></label>
+      <input type="radio" id="2sterren" name="sterren" value="sterren">
+      &star;
+      &star;
+
+      <label for="3sterren"></label>
+      <input type="radio" id="3sterren" name="sterren" value="sterren">
+      &star;
+      &star;
+      &star;
+
+      <label for="4sterren"></label>
+      <input type="radio" id="4sterren" name="sterren" value="sterren">
+      &star;
+      &star;
+      &star;
+      &star;
+  </div>
+  <div>
+    <button type="submit">Bewaar</button>
+  </div>
+
+</form>
+
+
+</body>
+
+</html>
